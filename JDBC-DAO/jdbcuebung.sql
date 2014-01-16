@@ -25,7 +25,7 @@ USE `jdbcuebung`;
 -- --------------------------------------------------------
 
 --
--- Tabellenstruktur für Tabelle `klassen`
+-- Tabellenstruktur fÃ¼r Tabelle `klassen`
 --
 
 CREATE TABLE IF NOT EXISTS `klassen` (
@@ -34,28 +34,30 @@ CREATE TABLE IF NOT EXISTS `klassen` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Daten für Tabelle `klassen`
+-- Daten fÃ¼r Tabelle `klassen`
 --
 
 INSERT INTO `klassen` (`id`) VALUES
 ('1BFIT'),
 ('3ASHT');
+('3HIF');
+('3BHIF');
 
 -- --------------------------------------------------------
 
 --
--- Tabellenstruktur für Tabelle `lehrer`
+-- Tabellenstruktur fÃ¼r Tabelle `lehrer`
 --
 
 CREATE TABLE IF NOT EXISTS `lehrer` (
-  `id` int(11) NOT NULL,
+  `id` int(5) NOT NULL,
   `vorname` varchar(20) NOT NULL,
   `nachname` varchar(20) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Daten für Tabelle `lehrer`
+-- Daten fÃ¼r Tabelle `lehrer`
 --
 
 INSERT INTO `lehrer` (`id`, `vorname`, `nachname`) VALUES
@@ -66,13 +68,13 @@ INSERT INTO `lehrer` (`id`, `vorname`, `nachname`) VALUES
 -- --------------------------------------------------------
 
 --
--- Tabellenstruktur für Tabelle `unterricht`
+-- Tabellenstruktur fÃ¼r Tabelle `unterricht`
 --
 
 CREATE TABLE IF NOT EXISTS `unterricht` (
   `l_id` int(11) NOT NULL,
   `k_id` varchar(10) NOT NULL,
-  `tagstunde` varchar(4) NOT NULL,
+  `stunde` varchar(4) NOT NULL,
   KEY `l_id` (`l_id`),
   KEY `k_id` (`k_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
