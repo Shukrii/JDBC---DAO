@@ -43,13 +43,13 @@ CREATE TABLE IF NOT EXISTS `klasse` (
 
 --
 
-INSERT INTO `klasse` (`id`) VALUES
-('1a'),
-('2b'),
-('3c'),
-('4a'),
-('5b'),
-('5c');
+INSERT INTO `klasse` (`id`, `bez`) VALUES
+('1AHIF', 'AHIF'),
+('1BHIF', 'BHIF'),
+('1CHIF', 'CHIF'),
+('2AHIF', 'AHIF'),
+('3BHIF', 'BHIF'),
+('3AHIF', 'AHIF');
 
 --
  --------------------------------------------------------
@@ -81,9 +81,11 @@ PRIMARY KEY (`id`)
 
 INSERT INTO `schueler` (`id`, `vorname`, `nachname`, `klasse`) VALUES
 
-(1, 'vorname1', 'nachname1', '1a'),
+(1, 'John', 'Jones', '1AHIF'),
 
-(2, 'vorname2', 'nachname2', '2b');
+(2, 'Max', 'Muster', '2AHIF');
+
+(3, 'Karl', 'Max', '3BHIF');
 
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
