@@ -1,4 +1,4 @@
-﻿-- phpMyAdmin SQL Dump
+-- phpMyAdmin SQL Dump
 -- version 4.0.4.1
 -- http://www.phpmyadmin.net
 --
@@ -27,66 +27,59 @@ USE `jdbcuebung`;
 --
 -- 
 
-Tabellenstruktur für Tabelle `klasse`
+-- Tabellenstruktur fÃ¼r Tabelle `flugzeugtyp`
 --
 
 
-CREATE TABLE IF NOT EXISTS `klasse` (
-  `id` varchar(5) NOT NULL,
+CREATE TABLE IF NOT EXISTS `flugzeugtyp` (
+  `bezeichnung` varchar(40) NOT NULL,
  
-					 PRIMARY KEY (`id`)
+					 PRIMARY KEY (`bezeichnung`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 
 --
--- Daten für Tabelle `klasse`
+-- Daten fÃ¼r Tabelle `flugzeugtyp`
 
 --
 
-INSERT INTO `klasse` (`id`, `bez`) VALUES
-('1AHIF', 'AHIF'),
-('1BHIF', 'BHIF'),
-('1CHIF', 'CHIF'),
-('2AHIF', 'AHIF'),
-('3BHIF', 'BHIF'),
-('3AHIF', 'AHIF');
+INSERT INTO `flugzeugtyp` (`bezeichnung`) VALUES
+('Passagierflugzeug'),
+('Transportflugzeug');
 
 --
- --------------------------------------------------------
+-- --------------------------------------------------------
 
 --
 -- 
-Tabellenstruktur für Tabelle `schueler`
+-- Tabellenstruktur fÃ¼r Tabelle `flugzeug`
 --
 
 
-CREATE TABLE IF NOT EXISTS `schueler` (
+CREATE TABLE IF NOT EXISTS `flugzeug` (
 
 `id` int(11) NOT NULL,
   
-`vorname` varchar(20) DEFAULT NULL,
-  
-`nachname` varchar(20) DEFAULT NULL,
-  
-`klasse` varchar(5) DEFAULT NULL,
+`name` varchar(20) DEFAULT NULL,
+    
+`typ` varchar(40) DEFAULT NULL,
   
 PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 
 --
--- Daten für Tabelle `schueler`
+-- Daten fÃ¼r Tabelle `flugzeug`
 --
 
 
-INSERT INTO `schueler` (`id`, `vorname`, `nachname`, `klasse`) VALUES
+INSERT INTO `mitarbeiter` (`id`, `name`, `typ`) VALUES
 
-(1, 'John', 'Jones', '1AHIF'),
+(1, 'Airbus A380', 'Passagierflugzeug'),
 
-(2, 'Max', 'Muster', '2AHIF');
+(2, 'Boeing 737', 'Passagierflugzeug'),
 
-(3, 'Karl', 'Max', '3BHIF');
-
+(3, 'Antonov AC100', 'Transportflugzeug');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
